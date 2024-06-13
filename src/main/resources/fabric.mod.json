@@ -19,14 +19,14 @@
 			"baunsu.shepmod.ShepMod"
 		],
 		"client": [
-			"baunsu.shepmod.ShepModModClient"
+			"baunsu.shepmod.ShepModClient"
 		],
 		"fabric-datagen": [
-			"baunsu.shepmod.ShepModModDataGenerator"
+			"baunsu.shepmod.ShepModDataGenerator"
 		]
 	},
 	"mixins": [
-		"tshepmod.mixins.json"
+		"shepmod.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.15.11",
