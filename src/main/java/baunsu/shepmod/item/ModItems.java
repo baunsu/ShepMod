@@ -12,9 +12,9 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item SHEP = registerItem("shep", new Item(new FabricItemSettings()));
+    public static final Item SHEP = registerItem("shep", new Item(new FabricItemSettings().food(ModFoodComponents.SHEP)));
 
-    private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
+    private static void addItemsToFoodAndDrinkItemGroup(FabricItemGroupEntries entries) {
         entries.add(SHEP);
     }
 
@@ -25,6 +25,6 @@ public class ModItems {
     public static void registerModItems() {
         ShepMod.LOGGER.info("Registering Items.");
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientItemGroup);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(ModItems::addItemsToFoodAndDrinkItemGroup);
     }
 }
