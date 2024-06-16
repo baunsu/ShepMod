@@ -10,10 +10,10 @@ import net.minecraft.util.Identifier;
 
 public class ShepRenderer extends MobEntityRenderer<ShepEntity, ShepModel<ShepEntity>> {
 
-    private static final Identifier TEXTURE = new Identifier(ShepMod.MOD_ID, "textures/entity/sheptexture.png");
+    private static final Identifier TEXTURE = new Identifier(ShepMod.MOD_ID, "textures/entity/shep/sheptexture.png");
 
     public ShepRenderer(EntityRendererFactory.Context context) {
-        super(context, new ShepModel<>(context.getPart(ModModeLayers.SHEP)), 0.6f);
+        super(context, new ShepModel<>(context.getPart(ModModeLayers.SHEP)), 0.25f);
     }
 
     @Override
@@ -23,7 +23,7 @@ public class ShepRenderer extends MobEntityRenderer<ShepEntity, ShepModel<ShepEn
 
     @Override
     public void render(ShepEntity mobEntity, float f, float g, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i) {
-        matrixStack.scale(1f, 1f, 1f);
+        matrixStack.scale(1.5f, 1.5f, 1.5f);
 
         super.render(mobEntity, f, g, matrixStack, vertexConsumerProvider, i);
     }
