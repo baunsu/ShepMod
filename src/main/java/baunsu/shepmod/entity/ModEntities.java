@@ -14,7 +14,7 @@ public class ModEntities {
     public static final EntityType<ShepEntity> SHEP = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(ShepMod.MOD_ID, "shep"),
             EntityType.Builder.create(ShepEntity::new, SpawnGroup.CREATURE)
-                    .setDimensions(1f,1f).build());
+                    .setDimensions(0.5f,0.5f).build());
 
     public static void registerModEntities() {
         ShepMod.LOGGER.info("Registering Entities for " + ShepMod.MOD_ID);
